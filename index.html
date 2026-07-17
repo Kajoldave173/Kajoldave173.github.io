@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kajol Dave · Data Scientist · Credit Risk & Fintech</title>
-<meta name="description" content="Data Scientist with 5 years of experience building production credit risk, fraud, and forecasting models across fintech and market intelligence.">
+<title>Kajol Dave · Data Scientist · Customer Analytics & Marketing Intelligence</title>
+<meta name="description" content="Data Scientist with 5 years of experience building propensity models, segmentation frameworks, and causal measurement systems across financial services, streaming, and market intelligence.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -64,7 +64,6 @@
     z-index: 0;
   }
 
-  /* Cursor */
   .cursor-dot, .cursor-ring { position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999; will-change: transform; }
   .cursor-dot {
     width: 7px; height: 7px; background: var(--accent); border-radius: 50%;
@@ -85,7 +84,6 @@
 
   .scanline { position: fixed; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--accent) 50%, transparent); opacity: 0.5; z-index: 100; }
 
-  /* Nav */
   nav.top {
     position: fixed; top: 0; left: 0; right: 0; z-index: 50;
     padding: 1.1rem 3rem; display: flex; justify-content: space-between; align-items: center;
@@ -113,7 +111,6 @@
   .section-title { font-family: var(--serif); font-size: clamp(2rem, 4.5vw, 3.25rem); font-weight: 400; line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 3rem; }
   .section-title em { font-style: italic; color: var(--accent); }
 
-  /* HERO */
   .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 7rem 0 3rem; }
   .hero .status { font-family: var(--mono); font-size: 11px; color: var(--accent); letter-spacing: 0.15em; margin-bottom: 1.75rem; display: flex; align-items: center; gap: 9px; opacity: 0; animation: fadeUp 0.6s 0.1s forwards; }
   .hero .status .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 10px 1px rgba(67,184,131,0.8); animation: pulse 2s infinite; }
@@ -144,13 +141,11 @@
   @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
   @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.35; } }
 
-  /* ABOUT */
   .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: start; }
   .about-body p { font-size: 1.0625rem; line-height: 1.75; color: var(--text-mid); margin-bottom: 1.25rem; }
   .about-body p strong { color: var(--text); font-weight: 500; }
   .about-body p .hl { color: var(--accent); }
 
-  /* Terminal block */
   .terminal { background: #070b09; border: 0.5px solid var(--border-bright); border-radius: 8px; overflow: hidden; font-family: var(--mono); font-size: 13px; line-height: 1.9; box-shadow: 0 24px 60px -20px rgba(0,0,0,0.6); }
   .terminal .bar { background: var(--bg-elev); padding: 0.7rem 1rem; display: flex; align-items: center; gap: 7px; border-bottom: 0.5px solid var(--border); }
   .terminal .bar i { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
@@ -170,7 +165,6 @@
   .terminal .caret2 { display: inline-block; width: 0.6ch; background: var(--accent); color: transparent; animation: blink 1s steps(1) infinite; }
   @media (max-width: 768px) { .about-grid { grid-template-columns: 1fr; gap: 2rem; } }
 
-  /* SKILLS */
   .skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--border); border: 0.5px solid var(--border); }
   .skill-block { background: var(--bg); padding: 1.75rem; transition: background 0.3s; }
   .skill-block:hover { background: var(--bg-card); }
@@ -186,7 +180,6 @@
   .domain-bar .chips span { font-family: var(--mono); font-size: 12px; padding: 6px 13px; background: rgba(67,184,131,0.08); border: 0.5px solid var(--accent-dim); color: var(--accent-bright); border-radius: 3px; }
   @media (max-width: 768px) { .skills-grid { grid-template-columns: 1fr; } }
 
-  /* PROJECTS */
   .project { margin-bottom: 5rem; padding-top: 2.5rem; border-top: 0.5px solid var(--border); }
   .project:last-child { margin-bottom: 0; }
   .project .ptag { font-family: var(--mono); font-size: 11px; color: var(--accent); letter-spacing: 0.12em; margin-bottom: 1rem; display: flex; align-items: center; gap: 10px; }
@@ -201,7 +194,7 @@
   .pblock p strong { color: var(--text); font-weight: 500; }
   .pblock ul { list-style: none; }
   .pblock ul li { font-size: 1rem; line-height: 1.7; color: var(--text-mid); padding-left: 1.5rem; position: relative; margin-bottom: 0.8rem; }
-  .pblock ul li::before { content: '→'; position: absolute; left: 0; color: var(--accent); }
+  .pblock ul li::before { content: '\2192'; position: absolute; left: 0; color: var(--accent); }
   .pblock ul li strong { color: var(--text); font-weight: 500; }
   .pside { position: sticky; top: 6rem; }
   .metric-card { background: var(--bg-card); border: 0.5px solid var(--border); border-radius: 6px; padding: 1.25rem; margin-bottom: 1px; }
@@ -212,7 +205,6 @@
   .pstack span { font-family: var(--mono); font-size: 11px; padding: 4px 9px; background: var(--bg-card); border: 0.5px solid var(--border); color: var(--text-mid); border-radius: 3px; }
   @media (max-width: 900px) { .pgrid { grid-template-columns: 1fr; gap: 1.5rem; } .pside { position: relative; top: auto; display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; } }
 
-  /* EXPERIENCE */
   .exp-intro { margin-bottom: 4rem; max-width: 640px; }
   .exp-intro p { font-size: 1.0625rem; line-height: 1.7; color: var(--text-mid); }
   .role { padding-bottom: 4rem; position: relative; padding-left: 2.5rem; }
@@ -238,7 +230,6 @@
   .role-single .hl { color: var(--accent-bright); }
   @media (max-width: 768px) { .subprojects { grid-template-columns: 1fr; } .role { padding-left: 1.75rem; } }
 
-  /* EDUCATION */
   .edu { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: 0.5px solid var(--border); }
   .edu-item { background: var(--bg); padding: 1.75rem; }
   .edu-item .date { font-family: var(--mono); font-size: 11px; color: var(--accent); letter-spacing: 0.1em; margin-bottom: 1rem; }
@@ -247,7 +238,6 @@
   .edu-item .track { font-family: var(--mono); font-size: 11px; color: var(--text-dim); letter-spacing: 0.05em; line-height: 1.6; }
   @media (max-width: 768px) { .edu { grid-template-columns: 1fr; } }
 
-  /* CONTACT */
   .contact { text-align: center; padding: 8rem 0; border-top: 0.5px solid var(--border); }
   .contact .label { font-family: var(--mono); font-size: 12px; color: var(--accent); letter-spacing: 0.2em; margin-bottom: 1.75rem; }
   .contact h2 { font-family: var(--serif); font-size: clamp(2.5rem, 7vw, 5rem); font-weight: 400; line-height: 1; letter-spacing: -0.03em; margin-bottom: 1.5rem; }
@@ -268,6 +258,8 @@
   .reveal.visible { opacity: 1; transform: translateY(0); }
 
   ::selection { background: var(--accent); color: var(--bg); }
+
+  .role-env { font-family: var(--mono); font-size: 11px; color: var(--text-faint); letter-spacing: 0.03em; margin-top: 0.4rem; font-style: italic; }
 </style>
 </head>
 <body>
@@ -291,20 +283,20 @@
 
 <!-- HERO -->
 <section class="hero">
-  <div class="status"><span class="dot"></span>AVAILABLE · BOSTON, MA</div>
-  <div class="role">DATA SCIENTIST · CREDIT RISK · FINTECH</div>
+  <div class="status"><span class="dot"></span>AVAILABLE · SPRINGFIELD, MA</div>
+  <div class="role">DATA SCIENTIST · CUSTOMER ANALYTICS · MARKETING INTELLIGENCE</div>
   <h1><span class="word">Kajol</span> <span class="word">Dave</span></h1>
   <div class="terminal-line"><span class="typed" id="typed"></span><span class="caret">_</span></div>
-  <p class="lede">I build production credit risk, fraud, and forecasting models, and turn what they output into decisions that move portfolios. Five years across <em>fintech lending</em> and <em>market intelligence</em>.</p>
+  <p class="lede">I build propensity models, segmentation frameworks, and causal measurement systems that help companies figure out who to target, what to offer, and when to act. Five years across <em>financial services</em>, <em>streaming</em>, and <em>market intelligence</em>.</p>
   <div class="cta">
     <a href="#projects" class="primary">VIEW WORK</a>
-    <a href="Kajol_Dave_Resume.pdf" target="_blank" rel="noopener" class="ghost">DOWNLOAD RESUME</a>
+    <a href="Kajol_Dave_Resume.pdf" download="Kajol_Dave_Resume.pdf" class="ghost">DOWNLOAD RESUME</a>
     <a href="#contact" class="ghost">GET IN TOUCH</a>
   </div>
   <div class="stats">
     <div class="stat"><div class="v">05</div><div class="l">YEARS EXPERIENCE</div></div>
-    <div class="stat"><div class="v">05+</div><div class="l">ML PROJECTS</div></div>
-    <div class="stat"><div class="v">04</div><div class="l">DOMAINS</div></div>
+    <div class="stat"><div class="v">800K+</div><div class="l">CUSTOMERS SCORED</div></div>
+    <div class="stat"><div class="v">03</div><div class="l">INDUSTRIES</div></div>
     <div class="stat"><div class="v">&#8734;</div><div class="l">COFFEE CUPS</div></div>
   </div>
 </section>
@@ -315,9 +307,9 @@
   <h2 class="section-title">Who <em>am I</em></h2>
   <div class="about-grid">
     <div class="about-body">
-      <p>I'm a <strong>Data Scientist</strong> who works at the point where a model stops being a notebook and starts carrying real money. Most of my career has been in <strong>regulated lending</strong>, where a prediction is only useful if it is calibrated, monitored, and defensible to a risk committee.</p>
-      <p>At <strong>Bajaj Finance</strong> I built and shipped the credit risk stack: <span class="hl">PD scorecards</span>, real-time scoring infrastructure, drift monitoring, and a fraud classifier running on tens of millions of transactions. Before fintech, I spent four years in <strong>market intelligence</strong> at Markets and Markets, Grand View Research, and Zion Market Research, forecasting demand and sizing markets for Fortune 500 and private equity stakeholders.</p>
-      <p>I'm finishing my <strong>M.S. in Business Analytics</strong> at UMass Amherst with a 4.0, where I have gone deep on <span class="hl">loss given default modeling</span>, survival analysis for early delinquency, and the production tooling that holds it all together. I care about interpretability, calibration, and never shipping a number I cannot explain.</p>
+      <p>I'm a <strong>Data Scientist</strong> who builds models that connect to business decisions: which customers to target, which markets to enter, and which campaigns are actually working. Most of my career has been in <strong>marketing analytics and market intelligence</strong>, where the output of a model has to survive a client presentation, not just a notebook.</p>
+      <p>At <strong>Bajaj Finance</strong> I built cross-sell propensity scoring systems that powered campaigns across <span class="hl">800K+ customers</span>, RFM-based segmentation pipelines, and a recommendation engine feeding personalized targeting through CDP across four channels. Before fintech, I spent three years in <strong>market intelligence</strong> at Markets and Markets and Zion Market Research, building NLP pipelines, demand forecasting models, and adjacency frameworks for Fortune 500 and streaming clients including Netflix, Siemens, LV, and FedEx.</p>
+      <p>I hold an <strong>M.S. in Business Analytics</strong> from UMass Amherst with a 4.0, where my work focused on <span class="hl">CLV prediction</span>, experimentation design, and MLOps. I care about model monitoring, honest measurement, and never shipping a metric I cannot defend.</p>
     </div>
     <div class="terminal">
       <div class="bar"><i class="r"></i><i class="y"></i><i class="g"></i><span class="name">kajol@portfolio: ~</span></div>
@@ -328,15 +320,15 @@
         <div><span class="prompt">$</span> <span class="cmd">cat profile.json</span></div>
         <div class="brace">{</div>
         <div class="kv"><span class="key">"role"</span>: <span class="str">"Data Scientist"</span>,</div>
-        <div class="kv"><span class="key">"focus"</span>: <span class="str">"Credit Risk / Fraud / Forecasting"</span>,</div>
+        <div class="kv"><span class="key">"focus"</span>: <span class="str">"Propensity Modeling / Segmentation / Causal Inference"</span>,</div>
         <div class="kv"><span class="key">"experience"</span>: <span class="str">"5 years"</span>,</div>
-        <div class="kv"><span class="key">"based"</span>: <span class="str">"Boston, MA"</span>,</div>
+        <div class="kv"><span class="key">"based"</span>: <span class="str">"Springfield, MA"</span>,</div>
         <div class="kv"><span class="key">"available"</span>: <span class="bool">true</span>,</div>
         <div class="kv"><span class="key">"coffee_dependency"</span>: <span class="warn">"non-negotiable"</span></div>
         <div class="brace">}</div>
         <div style="height:0.6rem"></div>
-        <div><span class="prompt">$</span> <span class="cmd">python score_portfolio.py --model pd_scorecard</span></div>
-        <div class="out">&#8594; scoring... <span class="bar-fill">&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;</span> done · ROC-AUC 0.82</div>
+        <div><span class="prompt">$</span> <span class="cmd">python score_portfolio.py --model cross_sell_propensity</span></div>
+        <div class="out">&#8594; scoring... <span class="bar-fill">&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;</span> done · AUC 0.85</div>
         <div style="height:0.6rem"></div>
         <div><span class="prompt">$</span> <span class="caret2">_</span></div>
       </div>
@@ -351,30 +343,30 @@
   <div class="skills-grid">
     <div class="skill-block">
       <div class="num">/01</div>
-      <h4>Credit Risk &amp; Production ML</h4>
+      <h4>Propensity Modeling &amp; Segmentation</h4>
       <div class="chips">
-        <span>PD / LGD / EAD</span><span>Scorecard Development</span><span>Stress Testing</span><span>Loss Forecasting</span><span>Vintage Analysis</span><span>Backtesting</span><span>Calibration</span><span>Model Risk Management</span><span>Real-Time Scoring</span><span>Drift Monitoring</span>
+        <span>XGBoost</span><span>Random Forest</span><span>LightGBM</span><span>Logistic Regression</span><span>k-Means</span><span>Latent Class Analysis</span><span>RFM</span><span>BG/NBD</span><span>SHAP</span><span>Cosine Similarity</span><span>Champion-Challenger</span><span>PSI Drift Monitoring</span>
       </div>
     </div>
     <div class="skill-block">
       <div class="num">/02</div>
-      <h4>Modeling &amp; Analytics</h4>
+      <h4>NLP &amp; Causal Inference</h4>
       <div class="chips">
-        <span>Logistic Regression</span><span>Beta Regression</span><span>XGBoost</span><span>LightGBM</span><span>Random Forest</span><span>Cox PH / Survival</span><span>K-Means</span><span>ARIMA / SARIMA / Prophet</span><span>SMOTE</span><span>SHAP</span><span>WoE / IV</span><span>Bayesian Stats</span>
+        <span>TF-IDF</span><span>LDA Topic Modeling</span><span>Exposed-Unexposed Studies</span><span>A/B Testing</span><span>Sequential Testing (mSPRT)</span><span>Thompson Sampling</span><span>Bayesian Inference</span><span>Power Analysis</span><span>Benjamini-Hochberg</span>
       </div>
     </div>
     <div class="skill-block">
       <div class="num">/03</div>
-      <h4>MLOps &amp; Cloud</h4>
+      <h4>Forecasting &amp; Market Sizing</h4>
       <div class="chips">
-        <span>AWS (SageMaker, S3, EC2, Redshift)</span><span>Azure (ML, Synapse, Databricks)</span><span>Docker</span><span>MLflow</span><span>Airflow</span><span>dbt</span><span>FastAPI</span><span>Streamlit</span><span>GitHub Actions</span><span>DagsHub</span><span>HuggingFace Spaces</span>
+        <span>ARIMA</span><span>Prophet</span><span>statsmodels</span><span>Bottom-up TAM</span><span>Adoption Curves</span><span>Scenario Modeling</span>
       </div>
     </div>
     <div class="skill-block">
       <div class="num">/04</div>
-      <h4>Languages, Data &amp; Viz</h4>
+      <h4>Tools &amp; Infrastructure</h4>
       <div class="chips">
-        <span>Python (Pandas, NumPy, scikit-learn)</span><span>SQL</span><span>PySpark</span><span>Snowflake</span><span>PostgreSQL</span><span>Git</span><span>Power BI</span><span>Tableau</span><span>Matplotlib</span><span>Plotly</span>
+        <span>Python</span><span>R</span><span>PySpark</span><span>SQL</span><span>Azure Databricks</span><span>Azure SQL</span><span>Azure Blob</span><span>Power BI</span><span>MLflow</span><span>Streamlit</span><span>Docker</span><span>DVC</span><span>Git</span><span>CDP</span>
       </div>
     </div>
   </div>
@@ -382,7 +374,7 @@
     <div class="num">/05 · DOMAIN EXPERTISE</div>
     <h4>Where I have shipped</h4>
     <div class="chips">
-      <span>Consumer Lending &amp; Credit Risk</span><span>Fraud Detection</span><span>Demand Forecasting</span><span>Market Intelligence</span><span>M&amp;A &amp; PE Diligence Support</span>
+      <span>Financial Services Marketing Analytics</span><span>Streaming &amp; Media</span><span>Market Intelligence</span><span>Campaign Measurement</span><span>Demand Forecasting</span>
     </div>
   </div>
 </section>
@@ -392,72 +384,73 @@
   <div class="section-label"><span class="slash">//</span> 03. PROJECTS</div>
   <h2 class="section-title">Selected <em>work</em></h2>
 
-  <!-- LGD -->
+  <!-- CLV -->
   <div class="project">
     <div class="ptag">PROJECT_01 <span class="feat">FEATURED</span></div>
-    <h3>LGD modeling &amp; <em>expected loss estimation</em></h3>
-    <p class="summary">A two-stage loss-given-default model on Freddie Mac mortgage data that estimates lifetime expected loss inside a PD x LGD x EAD framework, deployed end to end with a model registry, CI/CD, and an explainable scoring API.</p>
+    <h3>Customer lifetime value prediction &amp; <em>segmentation engine</em></h3>
+    <p class="summary">A hybrid probabilistic-ML pipeline on 1M+ e-commerce transactions that halved CLV prediction error, deployed with drift monitoring, automated testing, and an interactive scoring dashboard.</p>
     <div class="pgrid">
       <div class="pblock">
         <h4>THE PROBLEM</h4>
-        <p>Loss given default is one of the hardest quantities in credit risk to model honestly, because its distribution is bimodal. When a loan defaults, the lender usually recovers either almost everything or almost nothing, and the middle is thin. A single regression smooths that shape into a meaningless average, and it gets the tails wrong, which is precisely where capital reserves and loss provisions are decided. The goal was to respect that bimodality and produce a calibrated lifetime loss number the business could actually reserve against.</p>
+        <p>Most CLV models pick one lane: either a probabilistic approach like BG/NBD that captures the underlying buying process but ignores customer-level features, or an ML model like XGBoost that uses every feature available but treats CLV as a generic regression target with no behavioral structure. The probabilistic models are interpretable but leave money on the table. The ML models score better but cannot explain why. The goal was to combine both and prove the hybrid actually earns its complexity.</p>
 
         <h4>APPROACH</h4>
         <ul>
-          <li>Built a <strong>two-stage model</strong> on more than 1 million Freddie Mac single-family loan records. Stage one is a logistic regime classifier that separates total-loss defaults from partial-recovery defaults. Stage two models severity within the partial-recovery regime.</li>
-          <li>Used <strong>Beta Regression</strong> for the severity stage, since loss severity lives on the zero-to-one interval and is naturally beta-distributed, and benchmarked it against an <strong>XGBoost</strong> severity model to test whether nonlinearity bought anything. The recovery-regime fit landed at an R squared of 0.25, consistent with what the published LGD literature reports for this kind of data.</li>
-          <li>Engineered the drivers that credit risk teams actually trust: <strong>DTI, original and current loan-to-value, and delinquency history</strong>, transformed through WoE binning with IV-based selection so the inputs stay interpretable and stable across origination cohorts.</li>
-          <li>Validated the way a model risk function would want it validated: <strong>decile-level calibration plots, Brier score decomposition</strong> into reliability and resolution, and <strong>vintage backtesting</strong> across the 2019, 2020, and 2021 cohorts.</li>
+          <li>Built a <strong>two-stage pipeline</strong> on more than 1 million UK e-commerce transactions. Stage one fits <strong>BG/NBD + Gamma-Gamma</strong> probabilistic models to capture purchase frequency and monetary value distributions. Stage two feeds those probabilistic outputs alongside 23 engineered behavioral features into an <strong>Optuna-tuned XGBoost</strong> regressor.</li>
+          <li>Engineered features that the probabilistic models miss entirely: <strong>purchase velocity trends, category concentration, recency-frequency interaction terms</strong>, and inter-purchase interval variability, all designed to capture behavioral signals that distinguish high-value customers from one-time buyers.</li>
+          <li>Built a <strong>churn classifier</strong> (XGBoost) that improved AUC-ROC by 89 percent over the probabilistic P(alive) baseline, from 0.452 to <strong>0.855 with an F1 of 0.783</strong>, by using the same engineered feature set to predict which customers had gone dormant.</li>
+          <li>Discovered <strong>5 behavioral customer segments</strong> via K-Means clustering, revealing that 0.3 percent of customers (Whale Accounts) drove disproportionate predicted revenue while 43.5 percent (Lapsed) represented the largest retention opportunity.</li>
         </ul>
 
         <h4>WHAT IT FOUND</h4>
-        <p>Across a portfolio carrying 246.82 billion dollars of unpaid principal balance, the model estimated <strong>1.08 billion dollars of lifetime expected loss</strong>. More useful than the headline number was the concentration: the <strong>highest-risk decile carried 39 percent of expected loss while representing only 14 percent of loans</strong>. That is the kind of result that maps straight onto a watch list and a capital allocation decision, not just a model report.</p>
+        <p>The hybrid pipeline cut CLV prediction error in half compared to the probabilistic-only baseline: <strong>MAE dropped from &#163;673 to &#163;334</strong>, with an R&#178; of 0.965 on a 6-month holdout. The improvement was concentrated in the tails, exactly the customers who matter most for campaign targeting: the model separated high-value from low-value customers far more cleanly than either approach alone.</p>
 
         <h4>DEPLOYMENT</h4>
-        <p>I containerized both stages with <strong>Docker</strong> and deployed to <strong>AWS EC2</strong>. <strong>MLflow</strong> tracks runs and the Model Registry handles stage-gated promotion, so a model only advances if it clears the calibration thresholds. <strong>GitHub Actions</strong> runs the CI/CD pipeline, and a <strong>FastAPI</strong> endpoint serves scores with <strong>SHAP</strong> attributions attached, so a downstream user sees why a loan landed where it did, not just the figure.</p>
+        <p>Deployed a three-page <strong>Streamlit dashboard</strong> (Portfolio View, Customer Lookup, What-If Simulator) with interactive <strong>SHAP</strong> waterfall explanations and real-time CLV re-scoring for campaign ROI estimation. Built <strong>PSI-based drift monitoring</strong> and 19 automated data validation checks into the pipeline, backed by <strong>94 pytest tests</strong>. Containerized the full system with <strong>Docker Compose</strong>, tracked experiments on <strong>DagsHub MLflow</strong> with XGBoost vs. LightGBM comparison, and versioned all artifacts with <strong>DVC</strong>.</p>
       </div>
       <div class="pside">
-        <div class="metric-card"><div class="l">LIFETIME EXPECTED LOSS</div><div class="v">$1.08B</div><div class="sub">across portfolio</div></div>
-        <div class="metric-card"><div class="l">UPB ANALYZED</div><div class="v">$246.82B</div><div class="sub">unpaid principal</div></div>
-        <div class="metric-card"><div class="l">LOSS CONCENTRATION</div><div class="v">39%</div><div class="sub">of EL on 14% of loans</div></div>
+        <div class="metric-card"><div class="l">MAE REDUCTION</div><div class="v">50.3%</div><div class="sub">&#163;673 &#8594; &#163;334</div></div>
+        <div class="metric-card"><div class="l">R&#178;</div><div class="v">0.965</div><div class="sub">6-month holdout</div></div>
+        <div class="metric-card"><div class="l">CHURN AUC-ROC</div><div class="v">0.855</div><div class="sub">89% over baseline</div></div>
+        <div class="metric-card"><div class="l">CUSTOMER SEGMENTS</div><div class="v">5</div><div class="sub">behavioral clusters</div></div>
         <div class="pstack">
-          <span>Python</span><span>Beta Regression</span><span>XGBoost</span><span>Logistic Regression</span><span>WoE / IV</span><span>SHAP</span><span>AWS EC2</span><span>Docker</span><span>MLflow</span><span>FastAPI</span><span>Streamlit</span><span>GitHub Actions</span>
+          <span>Python</span><span>XGBoost</span><span>BG/NBD</span><span>Gamma-Gamma</span><span>Optuna</span><span>SHAP</span><span>scikit-learn</span><span>Streamlit</span><span>Docker</span><span>MLflow</span><span>DVC</span><span>pytest</span>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- FRAUD -->
+  <!-- EXPERIMENTATION -->
   <div class="project">
     <div class="ptag">PROJECT_02 <span class="feat">FEATURED</span></div>
-    <h3>Credit card <em>fraud detection system</em></h3>
-    <p class="summary">An end-to-end fraud detection pipeline on 590K transactions with severe class imbalance, framed not as a single accuracy number but as a tunable business decision between catching fraud and burning investigator time.</p>
+    <h3>Online experimentation <em>platform simulator</em></h3>
+    <p class="summary">A simulation platform that demonstrates why standard A/B tests break under real-world conditions and implements the sequential and bandit methods that fix them, deployed as an interactive comparison tool.</p>
     <div class="pgrid">
       <div class="pblock">
         <h4>THE PROBLEM</h4>
-        <p>Fraud detection is a class-imbalance problem first and a modeling problem second. With a <strong>3.4 percent fraud rate, roughly 28 legitimate transactions for every fraudulent one</strong>, accuracy is a useless metric: a model that flags nothing scores 96 percent. The real question is how much fraud you can catch before the false positives flood the investigation queue, so the entire project was built around precision-recall, not accuracy, and around making the tradeoff a dial that fraud operations can turn.</p>
+        <p>Most teams run A/B tests by checking results daily and stopping when something looks significant. This is statistically broken: the more you peek, the more you see false positives, because each check is a new opportunity for noise to look like signal. In practice, <strong>false positive rates inflate from the nominal 5 percent to 25-30 percent</strong>, meaning roughly one in four "winning" variants is actually noise. The platform was built to make this visible and to implement the methods that solve it.</p>
 
         <h4>APPROACH</h4>
         <ul>
-          <li>Benchmarked <strong>four models</strong>, Logistic Regression, Random Forest, XGBoost, and LightGBM, under a <strong>time-based train and test split</strong> so the evaluation never leaks future information into the past, which is the most common way fraud models look great in testing and fail in production.</li>
-          <li><strong>LightGBM won</strong>, beating XGBoost by 0.005 PR-AUC while training roughly <strong>four times faster, 105 seconds against 455</strong>, and with a smaller overfitting gap. Final model reached <strong>0.577 PR-AUC and 0.92 ROC-AUC, a 16.9 times lift over the no-skill baseline</strong>.</li>
-          <li>Engineered <strong>504 features</strong> from raw transaction and identity data, including smoothed target encoding for high-cardinality fields like email domains and addresses, parsing of device strings into 8 structured features, 156 paired missingness flags, and correlation-based pruning of 87 of 339 anonymized V-features at a 0.95 threshold.</li>
-          <li>Resolved a validation divergence under naive class weighting by sweeping LightGBM's <strong>scale_pos_weight from 1 to 10</strong>; the final model converged at 1,582 trees with a controlled 0.335 train-test PR-AUC gap.</li>
+          <li>Simulated <strong>50K+ e-commerce sessions</strong> across multiple test scenarios with configurable effect sizes, traffic volumes, and peek frequencies to demonstrate how repeated significance testing inflates Type I error rates under realistic conditions.</li>
+          <li>Implemented <strong>mSPRT sequential testing</strong> (mixture sequential probability ratio test), which constructs valid confidence sequences that hold at any stopping time, letting teams check results whenever they want without inflating error rates.</li>
+          <li>Built a <strong>Thompson Sampling multi-armed bandit</strong> that dynamically routes traffic based on posterior conversion distributions, allocating <strong>85+ percent of traffic to the winning variant</strong> in real time and reducing exposure to underperforming treatments compared to fixed 50/50 splits.</li>
+          <li>Added <strong>Benjamini-Hochberg multiple testing correction</strong> to control false discovery rates when measuring 4+ metrics simultaneously, with automated guardrail alerts that flag variants degrading bounce rate or page load time even when conversion improves.</li>
         </ul>
 
-        <h4>FRAMING IT AS A DECISION</h4>
-        <p>Rather than picking a threshold and hiding it, I produced a <strong>precision-recall threshold table</strong> so the cutoff is a business choice. At a 0.5 threshold the model catches <strong>1,644 of 3,611 fraud cases, 45.5 percent recall, at 72.8 percent precision</strong>. Fraud operations can slide that dial against the real cost tradeoff between chargebacks and investigation hours. On top of that, <strong>SHAP</strong> global and local explanations surface the top fraud drivers and produce per-transaction reason codes for analyst review and regulatory explainability.</p>
+        <h4>WHAT IT SHOWS</h4>
+        <p>The platform puts three approaches side by side: classical frequentist (fixed-horizon), sequential (mSPRT), and bandit (Thompson Sampling). Users can watch in real time how the frequentist approach generates false alarms under peeking, how the sequential method maintains valid error rates at any stopping point, and how the bandit minimizes regret by shifting traffic dynamically. The comparison makes the tradeoffs concrete: frequentist is simplest but fragile, sequential is safe but still splits traffic evenly, and bandit optimizes allocation but requires more infrastructure.</p>
 
         <h4>DEPLOYMENT</h4>
-        <p>Tracked more than <strong>20 experiments in MLflow on DagsHub</strong> with a model registry and a 0.005 PR-AUC promotion gate, so retraining cannot ship a model that only looks better because of noise. Deployed a <strong>Streamlit</strong> inference app on <strong>HuggingFace Spaces</strong> with a public demo, loading 10 fitted transformation artifacts so a single transaction is scored with exactly the same preprocessing as training. Containerized the service with <strong>Docker</strong> and authored <strong>Airflow</strong> DAGs for daily retraining and batch scoring.</p>
+        <p>Deployed as an interactive <strong>Streamlit</strong> dashboard on <strong>Streamlit Cloud</strong> with conversion curves, confidence intervals, a sample size calculator, and guardrail monitoring panels. The platform compares all three testing approaches in a single view. Backed by <strong>108 automated tests</strong> covering simulation logic, statistical calculations, and edge cases.</p>
       </div>
       <div class="pside">
-        <div class="metric-card"><div class="l">PR-AUC</div><div class="v">0.577</div><div class="sub">16.9x over baseline</div></div>
-        <div class="metric-card"><div class="l">ROC-AUC</div><div class="v">0.92</div><div class="sub">LightGBM champion</div></div>
-        <div class="metric-card"><div class="l">FEATURES ENGINEERED</div><div class="v">504</div><div class="sub">from raw txn + identity</div></div>
-        <div class="metric-card"><div class="l">CLASS IMBALANCE</div><div class="v">28:1</div><div class="sub">3.4% fraud rate</div></div>
+        <div class="metric-card"><div class="l">FALSE POSITIVE INFLATION</div><div class="v">5&#8594;30%</div><div class="sub">under daily peeking</div></div>
+        <div class="metric-card"><div class="l">BANDIT TRAFFIC ROUTING</div><div class="v">85%+</div><div class="sub">to winning variant</div></div>
+        <div class="metric-card"><div class="l">TESTING METHODS</div><div class="v">3</div><div class="sub">frequentist / sequential / bandit</div></div>
+        <div class="metric-card"><div class="l">AUTOMATED TESTS</div><div class="v">108</div><div class="sub">full test coverage</div></div>
         <div class="pstack">
-          <span>Python</span><span>LightGBM</span><span>XGBoost</span><span>scikit-learn</span><span>SHAP</span><span>MLflow</span><span>DagsHub</span><span>Streamlit</span><span>Docker</span><span>Airflow</span><span>HuggingFace Spaces</span>
+          <span>Python</span><span>SciPy</span><span>statsmodels</span><span>NumPy</span><span>Plotly</span><span>Streamlit</span><span>mSPRT</span><span>Thompson Sampling</span><span>Benjamini-Hochberg</span>
         </div>
       </div>
     </div>
@@ -469,7 +462,7 @@
   <div class="section-label"><span class="slash">//</span> 04. EXPERIENCE</div>
   <h2 class="section-title">Career <em>path</em></h2>
   <div class="exp-intro">
-    <p>Five years, four companies, one through-line: turning data into decisions someone is willing to act on. The arc runs from market forecasting into fintech credit risk, with the modeling getting heavier and the stakes getting higher at every step.</p>
+    <p>Five years, three companies, one through-line: building models that connect to decisions someone is willing to act on. The arc runs from market research and campaign measurement into fintech marketing analytics, with the modeling getting heavier and the business impact getting more direct at every step.</p>
   </div>
 
   <!-- BAJAJ -->
@@ -478,44 +471,33 @@
       <div class="date">MAR 2023 - JUN 2024</div>
       <div class="company">Bajaj Finance Ltd</div>
       <div class="title">DATA SCIENTIST</div>
+      <div class="role-env">Azure Databricks (PySpark, MLflow), Azure SQL, Power BI, CDP</div>
     </div>
-    <p class="role-intro">Bajaj is where I owned the credit risk modeling stack end to end, from the scorecard that decides who gets approved, to the infrastructure that scores them in real time, to the monitoring that catches a model going stale before it costs anything. Below are the projects I worked on, rather than a list of bullet points.</p>
+    <p class="role-intro">Bajaj is where I owned the cross-sell campaign intelligence stack: the propensity models that decide which customers see which offers, the segmentation that ranks them, the recommendation engine that personalizes across channels, and the monitoring that catches a model going stale before it costs conversion.</p>
     <div class="subprojects">
       <div class="subproject">
         <div class="sp-num">PROJECT // 01</div>
-        <h5>PD scorecard development &amp; calibration</h5>
-        <p>Built the Probability of Default models that sit under approval decisions, combining XGBoost with logistic regression scorecards on more than 500K loan records from credit bureau and internal data. Engineered utilization and delinquency features in dbt on Redshift using WoE binning and IV-based selection. In champion-challenger testing against the incumbent, the new scorecard lifted <strong>ROC-AUC from 0.76 to 0.82</strong>, improved <strong>KS from 0.36 to 0.40</strong>, and captured 14 percent more bad accounts in the top three deciles. I then calibrated the decision thresholds using econometric loss models, expected-loss simulations, and vintage cohort stress testing, which cut <strong>projected default rates by 8 percent</strong> while holding monthly approval volume within 1.5 percent of business targets.</p>
-        <div class="sp-stack">Python · XGBoost · dbt · Redshift · WoE / IV</div>
+        <h5>Cross-sell propensity scoring</h5>
+        <p>Built product-level propensity models using <strong>XGBoost and Random Forest</strong> in Azure Databricks ML with PySpark, scoring <strong>800K+ existing customers</strong> across personal loan, credit card, and gold loan products. The models lifted <strong>lead conversion by 8 percent</strong> and contributed <strong>15 percent of total campaign revenue</strong>.</p>
+        <div class="sp-stack">XGBoost · Random Forest · PySpark · Databricks ML</div>
       </div>
       <div class="subproject">
         <div class="sp-num">PROJECT // 02</div>
-        <h5>Real-time scoring infrastructure</h5>
-        <p>A good scorecard is worthless if it cannot score a live application, so I took the PD models into production. Deployed containerized scoring models to <strong>AWS SageMaker</strong> for real-time inference, with model artifacts on S3 and dbt-managed feature pipelines populating a Redshift feature store. The feature store was the point: it meant the exact same feature logic ran in batch training and in online scoring, which <strong>eliminated training-serving skew</strong>, the silent killer that makes a model behave differently in production than it did in validation.</p>
-        <div class="sp-stack">AWS SageMaker · S3 · Redshift · dbt · Docker</div>
+        <h5>RFM segmentation &amp; behavioral clustering</h5>
+        <p>Developed an RFM-based customer segmentation and behavioral clustering pipeline that ranked and tiered customers by conversion likelihood. The <strong>top three deciles captured 78 percent of total business volume</strong> across loan products, giving the campaign team a clear prioritization framework.</p>
+        <div class="sp-stack">RFM · K-Means · PySpark · Azure SQL</div>
       </div>
       <div class="subproject">
         <div class="sp-num">PROJECT // 03</div>
-        <h5>Model monitoring &amp; drift detection</h5>
-        <p>Models decay quietly. To catch it, I built <strong>Airflow-orchestrated monitoring</strong> that tracked PSI-driven population drift and AUC decay across three production models, with automated retraining triggers wired in. This kept the portfolio from drifting silently between quarterly review cycles and kept the whole pipeline aligned with model risk management standards, which matters as much as the accuracy number when an auditor comes asking.</p>
-        <div class="sp-stack">Airflow · PSI · AUC monitoring · MRM</div>
+        <h5>Recommendation engine &amp; CDP integration</h5>
+        <p>Engineered a recommendation engine integrating transaction history with <strong>Account Aggregator</strong> data via CDP, enabling hyper-personalized campaign targeting across <strong>SMS, push notification, app banner, and telesales</strong> channels. The personalization lifted lead conversion by an additional <strong>5-6 percent</strong> on top of the base propensity model gains.</p>
+        <div class="sp-stack">CDP · Account Aggregator · Python · Azure Databricks</div>
       </div>
       <div class="subproject">
         <div class="sp-num">PROJECT // 04</div>
-        <h5>Fraud detection model</h5>
-        <p>Built a supervised fraud classifier in Python and <strong>PySpark</strong> using XGBoost on more than <strong>10 million credit card transactions</strong>. With fraud at a 0.15 percent base rate, the entire challenge was imbalance, so I applied class weighting and tuned the decision threshold to land at <strong>0.78 F1 and 92 percent recall at a 1.5 percent false-positive rate</strong>. The threshold work is what made it deployable: high recall is easy if you accept a flood of false alarms, and the point was to catch fraud without drowning the investigation team.</p>
-        <div class="sp-stack">Python · PySpark · XGBoost · threshold optimization</div>
-      </div>
-      <div class="subproject">
-        <div class="sp-num">PROJECT // 05</div>
-        <h5>Payments reconciliation automation</h5>
-        <p>Not every win is a model. The payments reconciliation process was manual and slow, so I rebuilt it as an automated pipeline in <strong>Python on AWS</strong>. It cut booking time from <strong>T+1 days to 8 minutes</strong> and reduced the headcount the task required from 8 people to 1, which freed a team to do analysis instead of stitching spreadsheets. It earned a Kudos award from the Head of Operations, and it is the project I point to when someone asks whether I can find the unglamorous automation that quietly saves a department.</p>
-        <div class="sp-stack">Python · AWS · pipeline automation</div>
-      </div>
-      <div class="subproject">
-        <div class="sp-num">PROJECT // 06</div>
-        <h5>Customer segmentation</h5>
-        <p>Built a <strong>K-Means segmentation</strong> across credit utilization, EMI repayment consistency, spend velocity, and delinquency signals, turning a flat customer base into behavioral segments the business could actually treat differently. Segmentation like this is the input to everything downstream, from cross-sell targeting to which accounts get a closer watch on the risk side.</p>
-        <div class="sp-stack">Python · scikit-learn · K-Means</div>
+        <h5>Champion-challenger &amp; drift monitoring</h5>
+        <p>Designed a champion-challenger experimentation framework for propensity model variants, monitoring <strong>AUC decay and PSI drift</strong> on scheduled Databricks notebooks to trigger automated retraining before campaign performance degraded. This kept models fresh between review cycles without manual intervention.</p>
+        <div class="sp-stack">MLflow · PSI · AUC monitoring · Databricks Jobs</div>
       </div>
     </div>
   </div>
@@ -526,31 +508,27 @@
       <div class="date">MAY 2022 - FEB 2023</div>
       <div class="company">Markets and Markets</div>
       <div class="title">DATA SCIENTIST</div>
+      <div class="role-env">Azure Databricks, Azure SQL, Azure Blob, Power BI</div>
     </div>
-    <p class="role-single">Built <strong>ecosystem adjacency models</strong> in Python that mapped interconnected ICT segments across telecom, cloud, and infrastructure using Bloomberg Terminal, S&amp;P CapIQ, and PitchBook data through AWS Redshift. The work identified a <span class="hl">20 million dollar blockchain telecom adjacency</span> for a Fortune 500 software client, with 5 million dollars of projected two-year revenue.</p>
-    <p class="role-single">Developed <strong>time-series forecasting models</strong> with statsmodels, Prophet, and scikit-learn that integrated macro indicators, technology adoption curves, and competitive intensity, achieving <span class="hl">10 to 15 percent MAPE</span> across SD-WAN, cloud security, and 5G segments. Layered in scenario modeling and macroeconomic stress testing that captured supply constraints, hyperscaler capex shifts, and regulatory triggers, which let stakeholders stress-test investment theses across more than 5 private equity diligence engagements.</p>
-  </div>
-
-  <!-- GRAND VIEW -->
-  <div class="role">
-    <div class="role-head">
-      <div class="date">FEB 2021 - APR 2022</div>
-      <div class="company">Grand View Research</div>
-      <div class="title">DATA ANALYST</div>
-    </div>
-    <p class="role-single">Built <strong>forecasting models</strong> using ARIMA, SARIMA, ARIMAX, and Prophet in Python and SQL on more than 50K records in Azure Synapse, validated through rolling-window backtesting, and delivered digital infrastructure capex forecasts for <span class="hl">Siemens Digital Industries</span>.</p>
-    <p class="role-single">Designed <strong>bottom-up market-sizing frameworks</strong> that integrated Bloomberg Terminal, S&amp;P CapIQ, PitchBook, and trade-flow data across 6 M&amp;A diligence engagements for executive and PE stakeholders. Automated ingestion and feature engineering of vendor disclosure data in Python and Azure Databricks, with scheduled jobs feeding Power BI dashboards, cutting manual research effort by <span class="hl">30 percent</span>.</p>
+    <p class="role-single">Uncovered a <span class="hl">$20M adjacent market opportunity</span> ($5M projected 2-year revenue) for a Fortune 500 software client by building a <strong>lookalike segmentation model</strong> in scikit-learn on Databricks that scored 200+ candidate verticals on tech-stack and customer-base overlap, directly informing the client's market entry prioritization.</p>
+    <p class="role-single">Surfaced emerging technology trends ahead of traditional market reports by building an <strong>NLP pipeline</strong> on Databricks that extracted category signals from developer forums, tech blogs, and patent filings stored in Azure Blob, giving clients <span class="hl">first-mover advantage</span> in GTM timing decisions.</p>
+    <p class="role-single">Increased segment scoring cadence from bi-annual to quarterly across <strong>10,000+ company profiles</strong> (k-means, cosine similarity) by building automated ETL pipelines, giving clients <span class="hl">2-4x more current</span> expansion intelligence.</p>
+    <p class="role-single">Informed <strong>go/no-go market entry decisions</strong> for 5+ hypotheses per client engagement by building bottom-up TAM models and adoption curves (Prophet, statsmodels) projecting 5-to-10-year revenue potential across adjacent ecosystems.</p>
   </div>
 
   <!-- ZION -->
   <div class="role">
     <div class="role-head">
-      <div class="date">MAY 2019 - FEB 2021</div>
+      <div class="date">MAY 2019 - APR 2022</div>
       <div class="company">Zion Market Research</div>
-      <div class="title">JUNIOR DATA ANALYST</div>
+      <div class="title">DATA ANALYST</div>
+      <div class="role-env">Azure Databricks, Azure SQL, Power BI, R</div>
     </div>
-    <p class="role-single">Built <strong>bottom-up market-sizing models and segmentation</strong> in Python and SQL across more than 10 industry verticals, broken out by buyer persona, deployment type, and geography, surfacing subsegment growth pockets that informed client investment priorities.</p>
-    <p class="role-single">Established <strong>backtesting and MAPE-tracking practices</strong> on forecasting deliverables that surfaced systematic forecast errors and led to methodology revisions adopted across 10 published outputs. Rebuilt Tableau dashboards tracking vendor share, M&amp;A activity, and pricing dynamics, cutting reporting turnaround time by <span class="hl">20 percent</span> and surfacing quarterly KPI shifts that informed stakeholder decisions.</p>
+    <p class="role-single">Validated a <span class="hl">14-point lift in purchase intent</span> across 3 financial services campaigns by designing <strong>causal exposed-unexposed studies</strong> (n=12,000+) with matched controls, informing $2.5M in media budget reallocation.</p>
+    <p class="role-single">Classified <strong>80,000+ survey responses</strong> into 15 brand perception themes in under 2 hours using <strong>NLP (TF-IDF, LDA)</strong>, replacing a 3-week manual coding process and surfacing the exact consumer language clients adopted into campaign messaging.</p>
+    <p class="role-single">Delivered needs-based segmentation (<strong>LCA, k-means</strong>) across 10,000+ respondents into 5 clusters for a digital banking client, directly adopted into targeting rules that reduced their reported <span class="hl">acquisition cost by 18 percent</span>.</p>
+    <p class="role-single">Isolated a winning product positioning outperforming control by <span class="hl">19 percent on purchase intent</span> by designing <strong>monadic A/B tests</strong> across 6 messaging variants (n=8,000+) with Bayesian significance testing.</p>
+    <p class="role-single">Cut reporting effort by <strong>40 hours per month</strong> by building automated data pipelines for weekly brand health tracking across 5 concurrent accounts.</p>
   </div>
 </section>
 
@@ -584,12 +562,12 @@
 <section id="contact" class="contact reveal">
   <div class="label">// 06. CONTACT</div>
   <h2>Let's <em>talk</em></h2>
-  <p class="blurb">Open to Data Scientist and Data Analyst roles across industries. If you are building something where the data has to hold up under scrutiny, I would like to hear about it.</p>
-  <a href="mailto:kajoldave8@gmail.com" class="email">kajoldave8@gmail.com</a>
+  <p class="blurb">Open to Data Scientist roles across fintech, media, and marketing analytics. If you are building something where the model has to connect to a business decision, I would like to hear about it.</p>
+  <a href="mailto:kajoldave031@gmail.com" class="email">kajoldave031@gmail.com</a>
   <div class="contact-links">
     <a href="https://linkedin.com/in/kajol-dave" target="_blank" rel="noopener">&#9670; LINKEDIN</a>
     <a href="https://github.com/Kajoldave173" target="_blank" rel="noopener">&#8997; GITHUB</a>
-    <a href="Kajol_Dave_Resume.pdf" target="_blank" rel="noopener">&#8595; RESUME</a>
+    <a href="Kajol_Dave_Resume.pdf" download="Kajol_Dave_Resume.pdf">&#8595; RESUME</a>
     <a href="tel:+14133151114">&#9742; +1 (413) 315 1114</a>
   </div>
 </section>
@@ -598,7 +576,7 @@
 
 <footer>
   <div>&copy; 2026 KAJOL DAVE</div>
-  <div>BUILT WITH INTENT · BOSTON, MA</div>
+  <div>BUILT WITH INTENT · SPRINGFIELD, MA</div>
   <div class="stat-live">STATUS: OPEN TO WORK</div>
 </footer>
 
@@ -627,7 +605,7 @@
 })();
 
 (function() {
-  var phrases = ['building_models_that_ship()', 'quantifying_default_risk()', 'catching_fraud_at_scale()', 'turning_data_into_decisions()'];
+  var phrases = ['building_propensity_models()', 'segmenting_customers()', 'measuring_campaign_lift()', 'turning_data_into_decisions()'];
   var el = document.getElementById('typed');
   if (!el) return;
   var pi = 0, ci = 0, deleting = false;
